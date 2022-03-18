@@ -1,5 +1,5 @@
-export default function Fundo() {
+export default function Fundo({contador}) {
     return(
-        <footer className="centralizar-conteudo">0/8 concluídos</footer>
+        <footer className="centralizar-conteudo">{contador}/8 concluídos</footer>
     )
 }

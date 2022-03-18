@@ -17,10 +17,10 @@ function embaralhador() {
 	return Math.random() - 0.5; 
 }
 
-export default function Perguntas() {
+export default function Perguntas({atualizarContador}) {
     return(
         <ul className="perguntas">
-            {perguntas.map((pergunta, i) => <Pergunta key={pergunta.Q} pergunta={pergunta} indice={i + 1}/>)}
+            {perguntas.map((pergunta, i) => <Pergunta key={pergunta.Q} pergunta={pergunta} indice={i + 1} atualizarContador={atualizarContador}/>)}
         </ul>
     )
 }
