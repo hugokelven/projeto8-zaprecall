@@ -92,6 +92,8 @@
     justify-content: space-between;
     align-items: center;
 
+    color: #333333;
+
     margin-bottom: 5px;
 
     padding: 0 12px 0 6px;
@@ -105,7 +107,82 @@
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
+}
+
+.nao-lembrei {
+    text-decoration-line: line-through;
+    color: #FF3030;
+}
+
+.quase-nao-lembrei {
+    text-decoration-line: line-through;
+    color: #FF922E;
+}
+
+.zap {
+    text-decoration-line: line-through;
+    color: #2FBE34;
+}
+
+.QeR {
+    position: relative;
+
+    width: 100%;
+    min-height: 80px;
+
+    margin-bottom: 14px;
+
+    padding: 3px;
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    
+    background: #FFFFFF;
+}
+.QeR p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    margin-bottom: 35px;
+
     color: #333333;
+}
+.QeR ion-icon {
+    position: absolute;
+    bottom: 7px; right: 8px;
+}
+
+.avaliacao {
+    position: absolute;
+    z-index: 2;
+    bottom: 3px; left: 3px; right: 3px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.avaliacao * {
+    width: 55px;
+    height: 24px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7px;
+    text-align: center;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 5px;
+}
+.avaliacao button:nth-child(1) {
+    background-color: #FF3030;
+}
+.avaliacao button:nth-child(2) {
+    background-color: #FF922E;
+}
+.avaliacao button:nth-child(3) {
+    background-color: #2FBE34;
 }
 
 footer {

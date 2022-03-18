@@ -1,6 +1,6 @@
 import Pergunta from "./Pergunta";
 
-const perguntas = [
+let perguntas = [
     {Q: "O que é JSX?", R: "Uma extensão de linguagem do JavaScript"},
     {Q: "O React é __", R: "uma biblioteca JavaScript para construção de interfaces"},
     {Q: "Componentes devem iniciar com __", R: "letra maiúscula"},
@@ -10,6 +10,12 @@ const perguntas = [
     {Q: "Usamos props para __", R: "passar diferentes informações para componentes"},
     {Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}
 ]
+
+perguntas = perguntas.sort(embaralhador);
+
+function embaralhador() { 
+	return Math.random() - 0.5; 
+}
 
 export default function Perguntas() {
     return(
