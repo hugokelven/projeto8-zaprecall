@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Pergunta({pergunta, indice, atualizarContador}) {
+export default function Pergunta({pergunta, indice, atualizarContador, atualizarIcones}) {
 
     const [conteudo, setConteudo] = React.useState("conteudoEscondido")
 
@@ -48,9 +48,21 @@ export default function Pergunta({pergunta, indice, atualizarContador}) {
             <p>{texto}</p>
             <ion-icon name={icone} onClick={() => {setConteudo(estado)}}></ion-icon>
             <div className={classeAvaliacao}>
-                <button onClick={() => {setConteudo("naoLembrei"); atualizarContador("naoLembrei")}}>Não lembrei</button>
-                <button onClick={() => {setConteudo("quaseNaoLembrei"); atualizarContador("quaseNaoLembrei")}}>Quase não lembrei</button>
-                <button onClick={() => {setConteudo("zap"); atualizarContador("zap")}}>Zap!</button>
+                <button onClick={() => {
+                    setConteudo("naoLembrei")
+                    atualizarContador("naoLembrei")
+                    atualizarIcones("naoLembrei")
+                }}>Não lembrei</button>
+                <button onClick={() => {
+                    setConteudo("quaseNaoLembrei")
+                    atualizarContador("quaseNaoLembrei")
+                    atualizarIcones("quaseNaoLembrei")
+                }}>Quase não lembrei</button>
+                <button onClick={() => {
+                    setConteudo("zap")
+                    atualizarContador("zap")
+                    atualizarIcones("zap")
+                }}>Zap!</button>
             </div>
         </li>
     )

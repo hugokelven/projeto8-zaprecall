@@ -14,11 +14,31 @@ export default function Conteudo() {
         }
     }
 
+    const [icones, setIcones] = React.useState([])
+
+    function atualizarIcones(estado) {
+        let icone = ""
+        let classe = ""
+
+        if (estado === "naoLembrei") {
+            icone = "close-circle"
+            classe = "nao-lembrei"
+        } else if (estado === "quaseNaoLembrei") {
+            icone = "help-circle"
+            classe = "quase-nao-lembrei"
+        } else {
+            icone = "checkmark-circle"
+            classe = "zap"
+        }
+
+        setIcones([...icones, {nome: icone, classe: classe}])
+    }
+
     return(
-        <div className="conteudo ">
+        <div className="conteudo escondido">
             <Topo/>
-            <Perguntas atualizarContador={atualizarContador}/>
-            <Fundo contador={contador}/>
+            <Perguntas atualizarContador={atualizarContador} atualizarIcones={atualizarIcones}/>
+            <Fundo contador={contador} icones={icones}/>
         </div>
     )
 }
