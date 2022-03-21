@@ -261,3 +261,45 @@ footer {
 .escondido {
     display: none;
 }
+
+@media (min-width: 614px) {
+    .topo img {
+        width: 87px;
+    }
+    .topo h2 {
+        font-size: 64px;
+    }
+
+    .perguntas {
+        width: 567px;
+
+        margin-bottom: 118px;
+    }
+    .perguntas ion-icon {
+        font-size: 37px;
+    }
+
+    .pergunta {
+        height: 92px;
+    }
+    .pergunta p {
+        font-size: 24px;
+    }
+
+    .QeR p {
+        font-size: 24px;
+    }
+
+    footer {
+        height: 118px;
+
+        font-size: 32px;
+    }
+
+    .mensagem img {
+        width: 32px;
+    }
+    .mensagem p {
+        width: 100%;
+    }
+}

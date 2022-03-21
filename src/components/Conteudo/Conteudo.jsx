@@ -31,7 +31,7 @@ export default function Conteudo() {
             classe = "zap"
         }
 
-        setIcones([...icones, {nome: icone, classe: classe}])
+        setIcones([...icones, {nome: icone, classe: classe, key: icones.length}])
     }
 
     return(

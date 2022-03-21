@@ -1,3 +1,6 @@
+import EmojiTriste from "./../../../assets/sad.png"
+import EmojiFestejando from "./../../../assets/party.png"
+
 export default function Fundo({ contador, icones }) {
 
     const classes = { fundo: "centralizar-conteudo", mensagem: "mensagem escondido" }
@@ -10,12 +13,12 @@ export default function Fundo({ contador, icones }) {
 
     const mensagens = {
         parabens: {
-            imagem: { src: "assets/party.png", alt: "Emoji Festejando" },
+            imagem: { src: EmojiFestejando, alt: "Emoji Festejando" },
             titulo: "PARABÉNS!",
             texto: "Você não esqueceu de nenhum flashcard!"
         },
         putz: {
-            imagem: { src: "assets/sad.png", alt: "Emoji Triste" },
+            imagem: { src: EmojiTriste, alt: "Emoji Triste" },
             titulo: "PUTZ!",
             texto: "Ainda faltaram alguns... Mas não desanime!"
         }
@@ -54,7 +57,7 @@ export default function Fundo({ contador, icones }) {
             </div>
 
             <div className="resultado-icones">
-                {icones.map(icone => <span className={icone.classe}><ion-icon name={icone.nome}></ion-icon></span>)}
+                {icones.map(icone => <span key={icone.key} className={icone.classe}><ion-icon name={icone.nome}></ion-icon></span>)}
             </div>
         </footer>
     )
